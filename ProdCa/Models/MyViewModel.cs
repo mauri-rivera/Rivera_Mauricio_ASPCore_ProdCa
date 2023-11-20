@@ -14,8 +14,8 @@
 
         public List<Asociacion> ListaProductoPorCategoria { get; set; }
 
-        public List<Categoria> ListaCategoriaExcluida { get; set; }
+        public IEnumerable<string> ListaCategoriaExcluida { get; set; }
 
-        public List<Producto> ListaProductoExcluida { get; set; }
+        public IEnumerable<string> ListaProductoExcluida { get; set; }
     }
 }

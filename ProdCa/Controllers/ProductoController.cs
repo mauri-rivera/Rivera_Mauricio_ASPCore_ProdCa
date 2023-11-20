@@ -76,13 +76,19 @@ namespace ProdCa.Controllers
         [Route("products/{ProdId}")]
         public IActionResult AsociarCategoria(int ProdId)
         {
+            var listaNombre = _context.Associations.Include(p => p.Producto).Where(x => x.ProductoId == ProdId).Include(c => c.Categoria).Select(n => n.Categoria.Nombre).ToList();
+
+            var listaNombreExcluido = _context.Categories.Select(x => x.Nombre).ToList();
+
             MyViewModel myModel = new MyViewModel()
             {
                 ListaCategoriaPorProducto = _context.Associations.Include(p => p.Producto).Where(x => x.ProductoId == ProdId).Include(c => c.Categoria).ToList(),
-                ListaCategoriaExcluida = _context.Categories.Include(a => a.AsociacionPorCategoria).ThenInclude(p => p.Producto).Where(x => x.AsociacionPorCategoria.Max(h => h.ProductoId) != ProdId).ToList()
+                ListaCategoriaExcluida = listaNombreExcluido.Except(listaNombre)
             };
 
             ViewBag.ProductoId = ProdId;
+
+            ViewBag.Titulo = _context.Products.Where(n => n.ProductoId == ProdId).Select(i => i.Nombre).FirstOrDefault();
 
             return View(myModel);
         }

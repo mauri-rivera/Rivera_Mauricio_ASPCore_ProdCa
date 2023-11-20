@@ -123,3 +123,11 @@ nav {
     height: 4vh;
     justify-content: flex-end;
 }
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    margin: 4vh 0;
+    font-size: 2.5rem;
+    font-weight: bolder;
+}

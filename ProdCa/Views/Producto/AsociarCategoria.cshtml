@@ -2,6 +2,8 @@
 
 @await Html.PartialAsync("_BarraNav")
 
+<h1 class="titulo">@ViewBag.Titulo</h1>
+
 <div class="cuadroAcceso">
     <div class="columnaAcceso">
         @await Html.PartialAsync("_ListaCategoria", Model.ListaCategoriaPorProducto)
