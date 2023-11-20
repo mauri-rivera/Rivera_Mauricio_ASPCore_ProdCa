@@ -1,0 +1,125 @@
+﻿* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+
+main {
+    margin: 3vh 15vw;
+}
+
+.cuadroAcceso {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
+.columnaAcceso {
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    padding: 2vh 0;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.cuadroFormularioProducto,
+.cuadroFormularioProductoDos,
+.cuadroFormularioCategoria,
+.cuadroFormularioCategoriaDos {
+    display: flex;
+    flex-direction: column;
+    padding: 4vh 0;
+    margin-top: 1.25vh;
+}
+
+.cuadroFormularioProducto,
+.cuadroFormularioCategoria {
+    gap: .5vh;
+}
+
+.cuadroFormularioProductoDos,
+.cuadroFormularioCategoriaDos {
+    gap: 25vh;
+}
+
+.formularioDos {
+    width: 20vw;
+}
+
+.formulario, .formularioDos {
+    margin-top: 4vh;
+}
+
+    .formulario h2, .formularioDos h2 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+.cuadroTexto, .cuadroLista {
+    display: flex;
+    margin: 1.5vh 0;
+    flex-direction: column;
+    gap: .5vh;
+}
+
+.campoTexto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4vw;
+}
+
+.cuadroTexto input, .cuadroLista select {
+    display: flex;
+    padding: 1vh 1.5vw;
+    font-size: large;
+    width: 17.5vw;
+}
+
+.cuadroTexto label, .cuadroLista select, .itemLista, .itemOpcion {
+    display: flex;
+    font-weight: bold;
+}
+
+.cuadroTexto label {
+    font-size: x-large;
+}
+
+.itemLista {
+    font-size: xx-large;
+    margin: .5vh 0;
+}
+
+.cuadroTexto span {
+    display: flex;
+    color: red;
+    justify-content: flex-end;
+    height: 2vh;
+}
+
+.boton {
+    padding: 1.5vh 2vw;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    box-shadow: 5px 5px black;
+    font-size: larger;
+}
+
+.cuadroBoton {
+    display: flex;
+}
+
+.error {
+    display: flex;
+    height: 4vh;
+    justify-content: flex-end;
+}

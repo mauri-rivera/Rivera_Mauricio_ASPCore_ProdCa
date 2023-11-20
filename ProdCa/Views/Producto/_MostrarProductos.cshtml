@@ -1,0 +1,14 @@
+﻿
+<div class="formularioDos">
+    <h2>All Products</h2>
+    <div class="cuadroFormularioProducto">
+        <div class="cuadroLista">
+            @{
+                foreach (var item in Model)
+                {
+                    <a class="itemLista" asp-controller="Producto" asp-action="AsociarCategoria" asp-route-ProdId="@item.ProductoId">@item.Nombre</a>
+                }
+            }
+        </div>
+    </div>
+</div>

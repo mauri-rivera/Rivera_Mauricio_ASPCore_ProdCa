@@ -1,0 +1,12 @@
+﻿@model MyViewModel
+
+@await Html.PartialAsync("_BarraNav")
+
+<div class="cuadroAcceso">
+    <div class="columnaAcceso">
+        @await Html.PartialAsync("_ListaProducto", Model.ListaProductoPorCategoria)
+    </div>
+    <div class="columnaAcceso">
+        @await Html.PartialAsync("_IncluirProducto", Model.ListaProductoExcluida)
+    </div>
+</div>

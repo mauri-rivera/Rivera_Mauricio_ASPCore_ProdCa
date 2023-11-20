@@ -1,0 +1,16 @@
+﻿@model MyViewModel
+
+<nav>
+    <a asp-controller="Producto" asp-action="Index" method="GET">Products</a>
+    <span> | </span>
+    <span>Categories</span>
+</nav>
+
+<div class="cuadroAcceso">
+    <div class="columnaAcceso">
+        @await Html.PartialAsync("_AgregarCategoria", Model.newCategory)
+    </div>
+    <div class="columnaAcceso">
+        @await Html.PartialAsync("_MostrarCategorias", Model.ListaCategorias)
+    </div>
+</div>

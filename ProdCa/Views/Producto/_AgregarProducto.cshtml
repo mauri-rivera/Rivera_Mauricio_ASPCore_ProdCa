@@ -1,0 +1,34 @@
+﻿
+<form asp-controller="Producto" asp-action="AgregarProducto" method="POST">
+    <div class="formulario">
+        <h2>New Product</h2>
+        <div class="cuadroFormularioProducto">
+            <span class="error" style="color:red">@ViewBag.Error</span>
+            <div class="cuadroTexto">
+                <div class="campoTexto">
+                    <label for="Nombre">Name:</label>
+                    <input type="text" data-val="true" data-val-required="The Nombre field is required." id="Nombre" name="Nombre" value="">
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="Nombre" data-valmsg-replace="true"></span>
+            </div>
+            <div class="cuadroTexto">
+                <div class="campoTexto">
+                    <label for="Descripcion">Description:</label>
+                    <input type="text" data-val="true" data-val-required="The Descripcion field is required." id="Descripcion" name="Descripcion" value="">
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="Descripcion" data-valmsg-replace="true"></span>
+            </div>
+            <div class="cuadroTexto">
+                <div class="campoTexto">
+                    <label for="Precio">Price:</label>
+                    <input type="number" data-val="true" data-val-number="The field Precio must be a number." data-val-required="The Precio field is required." id="Precio" name="Precio" value="0,00" pattern="^[0-9]+"
+                           onkeypress="return event.charCode >= 48" min="1" oninput="this.value = Math.max(this.value, 1)">
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="Precio" data-valmsg-replace="true"></span>
+            </div>
+            <div class="cuadroBoton">
+                <button class="boton">Create</button>
+            </div>
+        </div>
+    </div>
+</form>

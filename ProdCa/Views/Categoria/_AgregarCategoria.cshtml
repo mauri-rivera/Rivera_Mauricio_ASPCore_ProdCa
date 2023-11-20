@@ -1,0 +1,19 @@
+﻿
+<form asp-controller="Categoria" asp-action="AgregarCategoria" method="POST">
+    <div class="formulario">
+        <h2>New Category</h2>
+        <div class="cuadroFormularioCategoria">
+            <span class="error" style="color:red">@ViewBag.Error</span>
+            <div class="cuadroTexto">
+                <div class="campoTexto">
+                    <label for="Nombre">Name:</label>
+                    <input type="text" data-val="true" data-val-required="The Nombre field is required." id="Nombre" name="Nombre" value="">
+                </div>
+                <span class="field-validation-valid" data-valmsg-for="Nombre" data-valmsg-replace="true"></span>
+            </div>
+            <div class="cuadroBoton">
+                <button class="boton">Create</button>
+            </div>
+        </div>
+    </div>
+</form>

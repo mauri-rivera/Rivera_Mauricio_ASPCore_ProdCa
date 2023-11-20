@@ -1,0 +1,14 @@
+﻿
+<div class="formularioDos">
+    <h2>Categories</h2>
+    <div class="cuadroFormularioCategoria">
+        <div class="cuadroLista">
+            @{
+                foreach (var item in Model)
+                {
+                    <span class="itemLista">@item.Producto.Nombre </span>
+                }
+            }
+        </div>
+    </div>
+</div>

@@ -1,0 +1,23 @@
+﻿
+<form asp-controller="Categoria" asp-action="IncluirProducto" asp-route-CtgId="@ViewBag.CategoriaId" method="POST">
+    <div class="formulario">
+        <h2>Add Product</h2>
+        <div class="cuadroFormularioCategoriaDos">
+            <div class="cuadroLista">
+                <div class="campoTexto">
+                    @{
+                        <select name="NombreProducto">
+                            @foreach (var item in Model)
+                            {
+                                <option class="itemOpcion">@item.Nombre</option>
+                            }
+                        </select>
+                    }
+                </div>
+            </div>
+            <div class="cuadroBoton">
+                <button class="boton">Add</button>
+            </div>
+        </div>
+    </div>
+</form>
